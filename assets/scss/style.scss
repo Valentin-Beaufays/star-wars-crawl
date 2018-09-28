@@ -1,0 +1,55 @@
+body{
+    overflow: hidden;
+}
+.title{
+    width:400px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    perspective: 400px;
+    
+}
+.texte{
+    transform: rotateX(65deg);
+}
+.scroller{
+    text-align: center;
+    animation-name: scroll;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-duration: 50s;
+    animation-fill-mode: forwards;
+
+    p{
+        animation-name: disapear;
+        animation-duration: 5s;
+        animation-delay:24s;
+        animation-fill-mode: forwards;
+    }
+
+    h2, h1{
+        animation-name: disapear;
+        animation-duration: 5s;
+        animation-delay: 6s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateY(73%)
+    }
+    100%{
+        transform: translateY(-80%);
+    }
+}
+
+@keyframes disapear{
+    0%{
+        color:black;
+    }
+    100%{
+        color: rgba(0,0,0,0);
+    }
+}
