@@ -1,14 +1,48 @@
 body{
     overflow: hidden;
 }
+
+@media only screen and (max-width:900px)
+{
+    .title{
+        width:200px;
+    }
+    .scroller{
+        animation-duration:80s;
+    }
+
+    p{
+        animation-delay:40s;
+    }
+
+    h2, h1{
+        animation-delay: 10s;
+    }
+}
+@media only screen and (min-width:900px)
+{
+    .title{
+        width:400px;
+    }
+    .scroller{
+        animation-duration: 50s;
+    }
+
+    p{
+        animation-delay:24s;
+    }
+
+    h2, h1{
+        animation-delay: 6s;
+    }
+}
+
 .title{
-    width:400px;
     position: absolute;
     left: 50%;
     top:50%;
     transform: translate(-50%,-50%);
     perspective: 400px;
-    
 }
 .texte{
     transform: rotateX(65deg);
@@ -17,28 +51,25 @@ body{
     text-align: center;
     animation-name: scroll;
     animation-direction: normal;
-    animation-iteration-count: 1;
-    animation-duration: 50s;
+    animation-iteration-count: 2;
     animation-fill-mode: forwards;
 
     p{
         animation-name: disapear;
         animation-duration: 5s;
-        animation-delay:24s;
         animation-fill-mode: forwards;
     }
 
     h2, h1{
         animation-name: disapear;
         animation-duration: 5s;
-        animation-delay: 6s;
         animation-fill-mode: forwards;
     }
 }
 
 @keyframes scroll{
     0%{
-        transform: translateY(73%)
+        transform: translateY(65%)
     }
     100%{
         transform: translateY(-80%);
