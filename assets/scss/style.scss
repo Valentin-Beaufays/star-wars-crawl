@@ -1,5 +1,13 @@
+$delay-scroll:7s;
+
 body{
     overflow: hidden;
+    margin:0;
+    padding:0;
+    background-image:url('../images/sky.png');
+    color:gold;
+    
+     
 }
 
 @media only screen and (max-width:1000px)
@@ -9,14 +17,13 @@ body{
     }
     .scroller{
         animation-duration:80s;
-    }
-
-    p{
-        animation-delay:40s;
-    }
-
-    h2, h1{
-        animation-delay: 10s;
+        p{
+            animation-delay:47s;
+        }
+    
+        h2, h1{
+            animation-delay: 17s;
+        }
     }
 }
 @media only screen and (min-width:1000px) and (orientation:landscape)
@@ -26,17 +33,41 @@ body{
     }
     .scroller{
         animation-duration: 50s;
-    }
+        animation-delay:$delay-scroll;
 
-    p{
-        animation-delay:24s;
-    }
-
-    h2, h1{
-        animation-delay: 6s;
+        p{
+            animation-delay:$delay-scroll+24s;
+        }
+    
+        h2, h1{
+            animation-delay: $delay-scroll+6s;
+        }
     }
 }
+//part 1
 
+.intro{
+    width:100%;
+    height:100%;
+    margin: 0;
+    padding:0;
+    position: absolute;
+    text-align:center;
+    color:rgb(0, 204, 255);
+    background-color:black;
+    animation-name: intro-disapear;
+    animation-delay: 5s;
+    animation-duration:2s;
+    animation-fill-mode: forwards;
+    p{
+        position: absolute;
+        top:50%; left:50%;
+        transform:translate(-50%,-50%);
+    }
+    
+}
+
+//part 2
 .title{
     position: absolute;
     left: 50%;
@@ -49,9 +80,10 @@ body{
 
         .scroller{
         text-align: center;
+        transform: translateY(70%);
         animation-name: scroll;
         animation-direction: normal;
-        animation-iteration-count: 2;
+        animation-iteration-count: infinite;
         animation-fill-mode: forwards;
 
             p{
@@ -71,7 +103,7 @@ body{
 
 @keyframes scroll{
     0%{
-        transform: translateY(65%)
+        transform: translateY(70%)
     }
     100%{
         transform: translateY(-80%);
@@ -80,9 +112,20 @@ body{
 
 @keyframes disapear{
     0%{
-        color:black;
+        color:gold;
     }
     100%{
-        color: rgba(0,0,0,0);
+        color: rgba(255, 217, 0, 0);
+    }
+}
+
+@keyframes intro-disapear{
+    0{
+        color:rgb(0, 204, 255);
+        background-color:black;
+    }
+    100%{
+        color:rgba(0, 204, 255,0);
+        background-color:rgba(0,0,0,0);
     }
 }

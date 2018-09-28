@@ -1,5 +1,9 @@
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/sky.png");
+  color: gold; }
 
 @media only screen and (max-width: 1000px) {
   .title {
@@ -7,25 +11,52 @@ body {
   .scroller {
     -webkit-animation-duration: 80s;
     animation-duration: 80s; }
-  p {
-    -webkit-animation-delay: 40s;
-    animation-delay: 40s; }
-  h2, h1 {
-    -webkit-animation-delay: 10s;
-    animation-delay: 10s; } }
+    .scroller p {
+      -webkit-animation-delay: 47s;
+      animation-delay: 47s; }
+    .scroller h2, .scroller h1 {
+      -webkit-animation-delay: 17s;
+      animation-delay: 17s; } }
 
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .title {
     width: 400px; }
   .scroller {
     -webkit-animation-duration: 50s;
-    animation-duration: 50s; }
-  p {
-    -webkit-animation-delay: 24s;
-    animation-delay: 24s; }
-  h2, h1 {
-    -webkit-animation-delay: 6s;
-    animation-delay: 6s; } }
+    animation-duration: 50s;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s; }
+    .scroller p {
+      -webkit-animation-delay: 31s;
+      animation-delay: 31s; }
+    .scroller h2, .scroller h1 {
+      -webkit-animation-delay: 13s;
+      animation-delay: 13s; } }
+
+.intro {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  color: #00ccff;
+  background-color: black;
+  -webkit-animation-name: intro-disapear;
+  animation-name: intro-disapear;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  .intro p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .title {
   position: absolute;
@@ -41,12 +72,15 @@ body {
     transform: rotateX(65deg); }
     .title .texte .scroller {
       text-align: center;
+      -webkit-transform: translateY(70%);
+      -ms-transform: translateY(70%);
+      transform: translateY(70%);
       -webkit-animation-name: scroll;
       animation-name: scroll;
       -webkit-animation-direction: normal;
       animation-direction: normal;
-      -webkit-animation-iteration-count: 2;
-      animation-iteration-count: 2;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards; }
       .title .texte .scroller p {
@@ -66,28 +100,44 @@ body {
 
 @-webkit-keyframes scroll {
   0% {
-    -webkit-transform: translateY(65%);
-    transform: translateY(65%); }
+    -webkit-transform: translateY(70%);
+    transform: translateY(70%); }
   100% {
     -webkit-transform: translateY(-80%);
     transform: translateY(-80%); } }
 
 @keyframes scroll {
   0% {
-    -webkit-transform: translateY(65%);
-    transform: translateY(65%); }
+    -webkit-transform: translateY(70%);
+    transform: translateY(70%); }
   100% {
     -webkit-transform: translateY(-80%);
     transform: translateY(-80%); } }
 
 @-webkit-keyframes disapear {
   0% {
-    color: black; }
+    color: gold; }
   100% {
-    color: rgba(0, 0, 0, 0); } }
+    color: rgba(255, 217, 0, 0); } }
 
 @keyframes disapear {
   0% {
-    color: black; }
+    color: gold; }
   100% {
-    color: rgba(0, 0, 0, 0); } }
+    color: rgba(255, 217, 0, 0); } }
+
+@-webkit-keyframes intro-disapear {
+  0 {
+    color: #00ccff;
+    background-color: black; }
+  100% {
+    color: rgba(0, 204, 255, 0);
+    background-color: rgba(0, 0, 0, 0); } }
+
+@keyframes intro-disapear {
+  0 {
+    color: #00ccff;
+    background-color: black; }
+  100% {
+    color: rgba(0, 204, 255, 0);
+    background-color: rgba(0, 0, 0, 0); } }
