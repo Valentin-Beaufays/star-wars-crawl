@@ -14,7 +14,7 @@ body {
     -webkit-animation-delay: 10s;
     animation-delay: 10s; } }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) and (orientation: landscape) {
   .title {
     width: 400px; }
   .scroller {
