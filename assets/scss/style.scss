@@ -2,7 +2,7 @@ body{
     overflow: hidden;
 }
 
-@media only screen and (max-width:900px)
+@media only screen and (max-width:1000px)
 {
     .title{
         width:200px;
@@ -19,7 +19,7 @@ body{
         animation-delay: 10s;
     }
 }
-@media only screen and (min-width:900px)
+@media only screen and (min-width:1000px)
 {
     .title{
         width:400px;
@@ -43,27 +43,29 @@ body{
     top:50%;
     transform: translate(-50%,-50%);
     perspective: 400px;
-}
-.texte{
+
+    .texte{
     transform: rotateX(65deg);
-}
-.scroller{
-    text-align: center;
-    animation-name: scroll;
-    animation-direction: normal;
-    animation-iteration-count: 2;
-    animation-fill-mode: forwards;
 
-    p{
-        animation-name: disapear;
-        animation-duration: 5s;
+        .scroller{
+        text-align: center;
+        animation-name: scroll;
+        animation-direction: normal;
+        animation-iteration-count: 2;
         animation-fill-mode: forwards;
-    }
 
-    h2, h1{
-        animation-name: disapear;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
+            p{
+                animation-name: disapear;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+            }
+
+            h2, h1{
+                animation-name: disapear;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+            }
+        }
     }
 }
 

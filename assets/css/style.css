@@ -1,7 +1,7 @@
 body {
   overflow: hidden; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .title {
     width: 200px; }
   .scroller {
@@ -14,7 +14,7 @@ body {
     -webkit-animation-delay: 10s;
     animation-delay: 10s; } }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
   .title {
     width: 400px; }
   .scroller {
@@ -36,35 +36,33 @@ body {
   transform: translate(-50%, -50%);
   -webkit-perspective: 400px;
   perspective: 400px; }
-
-.texte {
-  -webkit-transform: rotateX(65deg);
-  transform: rotateX(65deg); }
-
-.scroller {
-  text-align: center;
-  -webkit-animation-name: scroll;
-  animation-name: scroll;
-  -webkit-animation-direction: normal;
-  animation-direction: normal;
-  -webkit-animation-iteration-count: 2;
-  animation-iteration-count: 2;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-  .scroller p {
-    -webkit-animation-name: disapear;
-    animation-name: disapear;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
-  .scroller h2, .scroller h1 {
-    -webkit-animation-name: disapear;
-    animation-name: disapear;
-    -webkit-animation-duration: 5s;
-    animation-duration: 5s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
+  .title .texte {
+    -webkit-transform: rotateX(65deg);
+    transform: rotateX(65deg); }
+    .title .texte .scroller {
+      text-align: center;
+      -webkit-animation-name: scroll;
+      animation-name: scroll;
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+      -webkit-animation-iteration-count: 2;
+      animation-iteration-count: 2;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards; }
+      .title .texte .scroller p {
+        -webkit-animation-name: disapear;
+        animation-name: disapear;
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; }
+      .title .texte .scroller h2, .title .texte .scroller h1 {
+        -webkit-animation-name: disapear;
+        animation-name: disapear;
+        -webkit-animation-duration: 5s;
+        animation-duration: 5s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards; }
 
 @-webkit-keyframes scroll {
   0% {
