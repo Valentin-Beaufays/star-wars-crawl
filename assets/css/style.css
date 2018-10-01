@@ -2,36 +2,38 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  background-image: url("../images/sky.png");
-  color: gold; }
+  background-image: url("../images/sky.jpg");
+  color: #ffc400; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
   .title {
     width: 200px; }
   .scroller {
     -webkit-animation-duration: 80s;
-    animation-duration: 80s; }
+    animation-duration: 80s;
+    -webkit-animation-delay: 11s;
+    animation-delay: 11s; }
     .scroller p {
-      -webkit-animation-delay: 47s;
-      animation-delay: 47s; }
+      -webkit-animation-delay: 51s;
+      animation-delay: 51s; }
     .scroller h2, .scroller h1 {
-      -webkit-animation-delay: 17s;
-      animation-delay: 17s; } }
+      -webkit-animation-delay: 21s;
+      animation-delay: 21s; } }
 
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 1024px) {
   .title {
     width: 400px; }
   .scroller {
-    -webkit-animation-duration: 50s;
-    animation-duration: 50s;
-    -webkit-animation-delay: 7s;
-    animation-delay: 7s; }
+    -webkit-animation-duration: 80s;
+    animation-duration: 80s;
+    -webkit-animation-delay: 11s;
+    animation-delay: 11s; }
     .scroller p {
-      -webkit-animation-delay: 31s;
-      animation-delay: 31s; }
+      -webkit-animation-delay: 51s;
+      animation-delay: 51s; }
     .scroller h2, .scroller h1 {
-      -webkit-animation-delay: 13s;
-      animation-delay: 13s; } }
+      -webkit-animation-delay: 27s;
+      animation-delay: 27s; } }
 
 .intro {
   width: 100%;
@@ -58,6 +60,24 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
 
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .logo .logoBecode {
+    opacity: 0;
+    -webkit-animation-name: logo-disapear;
+    animation-name: logo-disapear;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
+
 .title {
   position: absolute;
   left: 50%;
@@ -68,13 +88,13 @@ body {
   -webkit-perspective: 400px;
   perspective: 400px; }
   .title .texte {
-    -webkit-transform: rotateX(65deg);
-    transform: rotateX(65deg); }
+    -webkit-transform: rotateX(55deg);
+    transform: rotateX(55deg); }
     .title .texte .scroller {
       text-align: center;
-      -webkit-transform: translateY(70%);
-      -ms-transform: translateY(70%);
-      transform: translateY(70%);
+      -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      transform: translateY(100%);
       -webkit-animation-name: scroll;
       animation-name: scroll;
       -webkit-animation-direction: normal;
@@ -83,14 +103,7 @@ body {
       animation-iteration-count: infinite;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards; }
-      .title .texte .scroller p {
-        -webkit-animation-name: disapear;
-        animation-name: disapear;
-        -webkit-animation-duration: 5s;
-        animation-duration: 5s;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards; }
-      .title .texte .scroller h2, .title .texte .scroller h1 {
+      .title .texte .scroller p, .title .texte .scroller h2, .title .texte .scroller h1 {
         -webkit-animation-name: disapear;
         animation-name: disapear;
         -webkit-animation-duration: 5s;
@@ -116,15 +129,15 @@ body {
 
 @-webkit-keyframes disapear {
   0% {
-    color: gold; }
+    color: #ffc400; }
   100% {
-    color: rgba(255, 217, 0, 0); } }
+    color: rgba(255, 196, 0, 0); } }
 
 @keyframes disapear {
   0% {
-    color: gold; }
+    color: #ffc400; }
   100% {
-    color: rgba(255, 217, 0, 0); } }
+    color: rgba(255, 196, 0, 0); } }
 
 @-webkit-keyframes intro-disapear {
   0 {
@@ -141,3 +154,23 @@ body {
   100% {
     color: rgba(0, 204, 255, 0);
     background-color: rgba(0, 0, 0, 0); } }
+
+@-webkit-keyframes logo-disapear {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0; } }
+
+@keyframes logo-disapear {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+    opacity: 0; } }
